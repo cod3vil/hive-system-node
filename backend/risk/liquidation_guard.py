@@ -12,10 +12,10 @@ Requirements: 5.8, 5.9, 4.10, 4.12
 from decimal import Decimal
 from typing import Optional
 
-from backend.core.models import Position
-from backend.services.exchange_client import ExchangeClient
-from backend.config.settings import SystemConfig
-from backend.utils.logger import get_logger
+from core.models import Position
+from services.exchange_client import ExchangeClient
+from config.settings import SystemConfig
+from utils.logger import get_logger
 
 
 logger = get_logger(__name__)

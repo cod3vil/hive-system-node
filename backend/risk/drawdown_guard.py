@@ -13,9 +13,9 @@ from decimal import Decimal
 from typing import Optional
 from dataclasses import dataclass
 
-from backend.storage.redis_client import RedisClient
-from backend.config.settings import SystemConfig
-from backend.utils.logger import get_logger
+from storage.redis_client import RedisClient
+from config.settings import SystemConfig
+from utils.logger import get_logger
 
 
 logger = get_logger(__name__)

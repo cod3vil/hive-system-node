@@ -9,8 +9,8 @@ from decimal import Decimal
 import redis.asyncio as redis
 from redis.asyncio.connection import ConnectionPool
 
-from backend.config.settings import SystemConfig
-from backend.utils.logger import get_logger
+from config.settings import SystemConfig
+from utils.logger import get_logger
 
 
 class RedisClient:

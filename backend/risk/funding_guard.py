@@ -15,11 +15,11 @@ from decimal import Decimal
 from typing import List, Optional
 from dataclasses import dataclass
 
-from backend.services.funding_service import FundingService, FundingRate
-from backend.storage.redis_client import RedisClient
-from backend.config.settings import SystemConfig
-from backend.utils.logger import get_logger
-from backend.services.notifier import get_notifier
+from services.funding_service import FundingService, FundingRate
+from storage.redis_client import RedisClient
+from config.settings import SystemConfig
+from utils.logger import get_logger
+from services.notifier import get_notifier
 
 
 logger = get_logger(__name__)

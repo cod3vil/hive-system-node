@@ -11,13 +11,13 @@ from decimal import Decimal
 from typing import Optional, List, Dict, Any, TYPE_CHECKING
 from datetime import datetime, date, timezone, timedelta
 
-from backend.storage.postgres_client import PostgresClient
-from backend.storage.redis_client import RedisClient
-from backend.utils.logger import get_logger
+from storage.postgres_client import PostgresClient
+from storage.redis_client import RedisClient
+from utils.logger import get_logger
 
 if TYPE_CHECKING:
-    from backend.services.equity_service import EquityService
-    from backend.services.position_service import PositionService
+    from services.equity_service import EquityService
+    from services.position_service import PositionService
 
 
 class DailyPnLService:

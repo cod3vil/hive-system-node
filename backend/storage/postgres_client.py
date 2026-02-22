@@ -7,8 +7,8 @@ from typing import Optional, List, Dict, Any
 from datetime import datetime
 import asyncpg
 
-from backend.config.settings import SystemConfig
-from backend.utils.logger import get_logger
+from config.settings import SystemConfig
+from utils.logger import get_logger
 
 
 class PostgresClient:

@@ -14,7 +14,7 @@ from datetime import datetime, timedelta
 from typing import Optional, Dict, Any
 from decimal import Decimal
 
-from backend.utils.logger import get_logger
+from utils.logger import get_logger
 
 
 class NetworkFailureState:

@@ -25,8 +25,8 @@ from typing import Optional
 
 import websockets
 
-from backend.config.settings import SystemConfig
-from backend.utils.logger import get_logger
+from config.settings import SystemConfig
+from utils.logger import get_logger
 
 
 class CommunicationBee:

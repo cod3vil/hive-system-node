@@ -15,10 +15,10 @@ from datetime import datetime
 from typing import Optional, Dict, Any
 from uuid import uuid4
 
-from backend.execution.order_manager import OrderManager, OrderResult
-from backend.storage.redis_client import RedisClient
-from backend.core.models import Position, PositionStatus
-from backend.utils.logger import get_logger
+from execution.order_manager import OrderManager, OrderResult
+from storage.redis_client import RedisClient
+from core.models import Position, PositionStatus
+from utils.logger import get_logger
 
 
 logger = get_logger(__name__)

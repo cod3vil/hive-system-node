@@ -11,9 +11,9 @@ from decimal import Decimal
 from typing import Optional, Dict
 import time
 
-from backend.services.exchange_client import ExchangeClient
-from backend.storage.redis_client import RedisClient
-from backend.utils.logger import get_logger
+from services.exchange_client import ExchangeClient
+from storage.redis_client import RedisClient
+from utils.logger import get_logger
 
 
 class BalanceService:

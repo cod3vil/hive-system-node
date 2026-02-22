@@ -13,9 +13,9 @@ import math
 from datetime import datetime
 from typing import List, Dict, Optional
 
-from backend.core.base_strategy import BaseScout, BaseSignal
-from backend.core.strategy_registry import StrategyRegistry
-from backend.utils.logger import get_logger
+from core.base_strategy import BaseScout, BaseSignal
+from core.strategy_registry import StrategyRegistry
+from utils.logger import get_logger
 
 logger = get_logger("QueenBee")
 
@@ -67,7 +67,7 @@ class QueenBee:
         """Discover enabled strategies and create Scout instances."""
         # Strategy packages are imported by backend/strategies/__init__.py,
         # which triggers self-registration into StrategyRegistry.
-        import backend.strategies  # noqa: F401
+        import strategies  # noqa: F401
 
         enabled = StrategyRegistry.get_enabled_strategies(self.config)
         await logger.info(f"蜂王启动 — 启用的策略: {enabled}")
@@ -473,7 +473,7 @@ class QueenBee:
                         continue
                     
                     # Convert to Position object
-                    from backend.core.models import Position
+                    from core.models import Position
                     position = Position.from_dict(position_data)
                     
                     await logger.info(

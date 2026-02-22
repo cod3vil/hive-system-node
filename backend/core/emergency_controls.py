@@ -14,14 +14,14 @@ from typing import List, Optional, TYPE_CHECKING
 from datetime import datetime
 from dataclasses import dataclass
 
-from backend.storage.redis_client import RedisClient
-from backend.config.settings import get_config
-from backend.services.notifier import get_notifier
-from backend.utils.logger import get_logger
+from storage.redis_client import RedisClient
+from config.settings import get_config
+from services.notifier import get_notifier
+from utils.logger import get_logger
 
 if TYPE_CHECKING:
-    from backend.execution.trade_executor import TradeExecutor
-    from backend.websocket.websocket_server import ConnectionManager
+    from execution.trade_executor import TradeExecutor
+    from websocket.websocket_server import ConnectionManager
 
 
 logger = get_logger(__name__)
@@ -150,7 +150,7 @@ class EmergencyControls:
             # Close each position in batches (Requirement 7.3)
             # Sort by position notional size (largest first) and batch to reduce market impact
             if self.trade_executor:
-                from backend.core.models import Position
+                from core.models import Position
 
                 # Load all positions and sort by notional size descending
                 position_objects = []

@@ -9,7 +9,7 @@ Caches:
 import json
 from typing import List, Optional
 
-from backend.utils.logger import get_logger
+from utils.logger import get_logger
 
 logger = get_logger("MarketPairCache")
 

@@ -10,9 +10,9 @@ from decimal import Decimal
 from typing import List, Optional
 from datetime import datetime
 
-from backend.core.base_strategy import BaseScout, BaseSignal
-from backend.strategies.cash_carry.signal import CashCarrySignal
-from backend.utils.logger import get_logger
+from core.base_strategy import BaseScout, BaseSignal
+from strategies.cash_carry.signal import CashCarrySignal
+from utils.logger import get_logger
 
 logger = get_logger(__name__)
 

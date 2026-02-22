@@ -11,12 +11,12 @@ from decimal import Decimal
 from typing import Optional, TYPE_CHECKING
 from datetime import datetime, date
 
-from backend.storage.redis_client import RedisClient
-from backend.services.exchange_client import ExchangeClient
-from backend.utils.logger import get_logger
+from storage.redis_client import RedisClient
+from services.exchange_client import ExchangeClient
+from utils.logger import get_logger
 
 if TYPE_CHECKING:
-    from backend.websocket.websocket_server import ConnectionManager
+    from websocket.websocket_server import ConnectionManager
 
 
 class EquityService:

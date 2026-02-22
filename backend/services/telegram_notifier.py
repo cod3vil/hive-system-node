@@ -9,8 +9,8 @@ import asyncio
 from typing import Optional
 from datetime import datetime
 
-from backend.config.settings import SystemConfig
-from backend.utils.logger import get_logger
+from config.settings import SystemConfig
+from utils.logger import get_logger
 
 
 logger = get_logger(__name__)

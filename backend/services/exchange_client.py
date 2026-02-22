@@ -12,8 +12,8 @@ import ccxt.async_support as ccxt
 from decimal import Decimal
 from typing import Dict, List, Optional, Any
 from datetime import datetime, timedelta
-from backend.config.settings import SystemConfig
-from backend.utils.logger import get_logger
+from config.settings import SystemConfig
+from utils.logger import get_logger
 
 
 logger = get_logger(__name__)

@@ -1,6 +1,6 @@
 """WebSocket server for real-time updates."""
 
-from backend.websocket.websocket_server import (
+from websocket.websocket_server import (
     ConnectionManager,
     connection_manager,
     create_websocket_app,

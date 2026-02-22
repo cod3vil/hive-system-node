@@ -11,11 +11,11 @@ from decimal import Decimal
 from typing import Optional, List
 from dataclasses import dataclass
 
-from backend.config.settings import SystemConfig
-from backend.storage.redis_client import RedisClient
-from backend.services.equity_service import EquityService
-from backend.services.exchange_client import ExchangeClient
-from backend.utils.logger import get_logger
+from config.settings import SystemConfig
+from storage.redis_client import RedisClient
+from services.equity_service import EquityService
+from services.exchange_client import ExchangeClient
+from utils.logger import get_logger
 
 
 logger = get_logger(__name__)

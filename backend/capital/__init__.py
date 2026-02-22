@@ -1,6 +1,6 @@
 """Capital allocation module (Queen)."""
 
-from backend.capital.capital_allocator import (
+from capital.capital_allocator import (
     CapitalAllocator,
     ValidationResult,
     AllocationResult

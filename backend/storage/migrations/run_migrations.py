@@ -14,7 +14,7 @@ from pathlib import Path
 # Add project root to path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
 
-from backend.config.settings import get_config
+from config.settings import get_config
 
 try:
     import asyncpg

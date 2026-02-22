@@ -24,7 +24,7 @@ from collections import deque
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect, status, Query
 from fastapi.middleware.cors import CORSMiddleware
 
-from backend.utils.logger import get_logger
+from utils.logger import get_logger
 
 
 class ConnectionManager:

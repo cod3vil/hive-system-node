@@ -13,13 +13,13 @@ from typing import List, Dict, Any, Optional, Tuple
 from datetime import datetime
 import asyncio
 
-from backend.core.models import Position, PositionStatus
-from backend.storage.redis_client import RedisClient
-from backend.storage.postgres_client import PostgresClient
-from backend.services.exchange_client import ExchangeClient
-from backend.services.position_service import PositionService
-from backend.services.equity_service import EquityService
-from backend.utils.logger import get_logger
+from core.models import Position, PositionStatus
+from storage.redis_client import RedisClient
+from storage.postgres_client import PostgresClient
+from services.exchange_client import ExchangeClient
+from services.position_service import PositionService
+from services.equity_service import EquityService
+from utils.logger import get_logger
 
 
 class StateDiscrepancy:

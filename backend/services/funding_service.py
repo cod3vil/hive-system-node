@@ -17,10 +17,10 @@ from typing import List, Optional, Dict, Any
 from datetime import datetime, timedelta
 from dataclasses import dataclass
 
-from backend.services.exchange_client import ExchangeClient
-from backend.storage.redis_client import RedisClient
-from backend.utils.logger import get_logger
-from backend.config.settings import get_config
+from services.exchange_client import ExchangeClient
+from storage.redis_client import RedisClient
+from utils.logger import get_logger
+from config.settings import get_config
 
 
 logger = get_logger(__name__)
@@ -425,7 +425,7 @@ class FundingService:
             )
             
             # Send alerts to all channels
-            from backend.services.notifier import get_notifier
+            from services.notifier import get_notifier
             notifier = get_notifier(get_config())
             await notifier.notify_funding_anomaly(position_id)
 

@@ -7,7 +7,7 @@ from decimal import Decimal
 from datetime import datetime
 from typing import Dict, Any
 
-from backend.core.base_strategy import BaseSignal
+from core.base_strategy import BaseSignal
 
 
 @dataclass

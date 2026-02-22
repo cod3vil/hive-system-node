@@ -16,20 +16,20 @@ from typing import List, Optional, Dict, Any, TYPE_CHECKING
 from dataclasses import dataclass
 from datetime import datetime, timedelta
 
-from backend.risk.liquidation_guard import LiquidationGuard
-from backend.risk.drawdown_guard import DrawdownGuard, DrawdownStatus
-from backend.risk.funding_guard import FundingGuard
-from backend.capital.capital_allocator import CapitalAllocator
-from backend.services.funding_service import FundingService
-from backend.storage.redis_client import RedisClient
-from backend.services.exchange_client import ExchangeClient
-from backend.config.settings import SystemConfig
-from backend.utils.logger import get_logger
-from backend.services.notifier import get_notifier
+from risk.liquidation_guard import LiquidationGuard
+from risk.drawdown_guard import DrawdownGuard, DrawdownStatus
+from risk.funding_guard import FundingGuard
+from capital.capital_allocator import CapitalAllocator
+from services.funding_service import FundingService
+from storage.redis_client import RedisClient
+from services.exchange_client import ExchangeClient
+from config.settings import SystemConfig
+from utils.logger import get_logger
+from services.notifier import get_notifier
 
 if TYPE_CHECKING:
-    from backend.execution.trade_executor import TradeExecutor
-    from backend.websocket.websocket_server import ConnectionManager
+    from execution.trade_executor import TradeExecutor
+    from websocket.websocket_server import ConnectionManager
 
 
 logger = get_logger(__name__)
@@ -466,7 +466,7 @@ class RiskEngine:
                 for position_id in open_positions:
                     position_data = await self.redis.get_position(position_id)
                     if position_data:
-                        from backend.core.models import Position
+                        from core.models import Position
                         position = Position.from_dict(position_data)
                         
                         # Check strategy type and route to appropriate monitor
@@ -500,7 +500,7 @@ class RiskEngine:
             perp_symbol = position_data.get("perp_symbol")
             
             # Requirements 5.8, 5.9: Check liquidation distance
-            from backend.core.models import Position
+            from core.models import Position
             position = Position.from_dict(position_data)
             
             liquidation_risk = await self.liquidation_guard.check_liquidation_risk(position)

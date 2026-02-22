@@ -8,10 +8,10 @@ Each channel is independent — one failing won't block the others.
 import asyncio
 from typing import Optional
 
-from backend.config.settings import SystemConfig
-from backend.services.telegram_notifier import TelegramNotifier, get_telegram_notifier
-from backend.services.feishu_notifier import FeishuNotifier, get_feishu_notifier
-from backend.utils.logger import get_logger
+from config.settings import SystemConfig
+from services.telegram_notifier import TelegramNotifier, get_telegram_notifier
+from services.feishu_notifier import FeishuNotifier, get_feishu_notifier
+from utils.logger import get_logger
 
 
 logger = get_logger(__name__)

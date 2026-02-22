@@ -5,7 +5,7 @@ This can be run independently or integrated into the main application.
 """
 
 import uvicorn
-from backend.websocket.websocket_server import create_websocket_app
+from websocket.websocket_server import create_websocket_app
 
 
 def main():

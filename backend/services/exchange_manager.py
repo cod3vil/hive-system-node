@@ -8,9 +8,9 @@ from enum import Enum
 from typing import Dict, Optional
 from decimal import Decimal
 
-from backend.services.exchange_client import ExchangeClient
-from backend.config.settings import SystemConfig
-from backend.utils.logger import get_logger
+from services.exchange_client import ExchangeClient
+from config.settings import SystemConfig
+from utils.logger import get_logger
 
 
 logger = get_logger(__name__)

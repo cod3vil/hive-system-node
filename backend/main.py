@@ -12,31 +12,31 @@ from typing import Optional
 from datetime import datetime
 import uvicorn
 
-from backend.config.settings import get_config
-from backend.storage.redis_client import RedisClient
-from backend.storage.postgres_client import PostgresClient
-from backend.services.exchange_client import ExchangeClient
-from backend.services.exchange_manager import ExchangeManager
-from backend.services.funding_service import FundingService
-from backend.services.position_service import PositionService
-from backend.services.equity_service import EquityService
-from backend.services.balance_service import BalanceService
-from backend.services.cross_exchange_spread_service import CrossExchangeSpreadService
-from backend.capital.capital_allocator import CapitalAllocator
-from backend.risk.risk_engine import RiskEngine
-from backend.risk.liquidation_guard import LiquidationGuard
-from backend.risk.drawdown_guard import DrawdownGuard
-from backend.risk.funding_guard import FundingGuard
-from backend.execution.trade_executor import TradeExecutor
-from backend.execution.order_manager import OrderManager
-from backend.core.cold_start_recovery import ColdStartRecovery
-from backend.core.network_resilience import NetworkResilienceManager
-from backend.utils.logger import get_logger
-from backend.services.notifier import NotifyDispatcher, get_notifier
-from backend.websocket.websocket_server import get_connection_manager, create_websocket_app
-from backend.hive.queen_bee import QueenBee
-from backend.hive.communication_bee import CommunicationBee
-from backend.services.market_pair_cache import MarketPairCache
+from config.settings import get_config
+from storage.redis_client import RedisClient
+from storage.postgres_client import PostgresClient
+from services.exchange_client import ExchangeClient
+from services.exchange_manager import ExchangeManager
+from services.funding_service import FundingService
+from services.position_service import PositionService
+from services.equity_service import EquityService
+from services.balance_service import BalanceService
+from services.cross_exchange_spread_service import CrossExchangeSpreadService
+from capital.capital_allocator import CapitalAllocator
+from risk.risk_engine import RiskEngine
+from risk.liquidation_guard import LiquidationGuard
+from risk.drawdown_guard import DrawdownGuard
+from risk.funding_guard import FundingGuard
+from execution.trade_executor import TradeExecutor
+from execution.order_manager import OrderManager
+from core.cold_start_recovery import ColdStartRecovery
+from core.network_resilience import NetworkResilienceManager
+from utils.logger import get_logger
+from services.notifier import NotifyDispatcher, get_notifier
+from websocket.websocket_server import get_connection_manager, create_websocket_app
+from hive.queen_bee import QueenBee
+from hive.communication_bee import CommunicationBee
+from services.market_pair_cache import MarketPairCache
 
 
 class Application:

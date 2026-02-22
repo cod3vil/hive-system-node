@@ -13,8 +13,8 @@ from decimal import Decimal
 from datetime import datetime
 from typing import Optional, Dict, Any
 from uuid import uuid4
-from backend.services.exchange_client import ExchangeClient, OrderError
-from backend.utils.logger import get_logger
+from services.exchange_client import ExchangeClient, OrderError
+from utils.logger import get_logger
 
 
 logger = get_logger(__name__)
