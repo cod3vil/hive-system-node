@@ -1,0 +1,1 @@
+"""Hive architecture - QueenBee controller."""
