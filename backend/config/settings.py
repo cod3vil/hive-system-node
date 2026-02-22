@@ -28,7 +28,7 @@ class SystemConfig(BaseSettings):
     )
     
     # Application
-    app_name: str = "stable-cash-carry-mvp"
+    app_name: str = "hive-system-node"
     environment: str = Field(default="development", pattern="^(development|staging|production)$")
     log_level: str = Field(default="INFO", pattern="^(DEBUG|INFO|WARNING|ERROR|CRITICAL)$")
     
@@ -133,7 +133,7 @@ class SystemConfig(BaseSettings):
     # PostgreSQL (Requirements 10.1, 10.2)
     postgres_host: str = Field(default="localhost")
     postgres_port: int = Field(default=5432)
-    postgres_database: str = Field(default="stable_cash_carry")
+    postgres_database: str = Field(default="hive_system")
     postgres_user: str = Field(default="postgres")
     postgres_password: str = Field(default="")
     postgres_min_connections: int = Field(default=2)
